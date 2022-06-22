@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <style>
+         *{
+                padding: 0;
+                margin: 0;
+                outline: none;
+                border: none;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+                text-transform: capitalize;
+            }
+            html{
+                font-size: 62.5%;
+            }
+          .signup{
+            font-size: 2rem;
+            padding: 1.5rem;
+            color: white;
+            background-color: black;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+            margin-top: 1rem;
+            border-radius: 50%;
+            align-items: center;
+          }
+          .two{
+            margin: auto;
+            width: 30%;
+            height: fit-content;
+            display: flex;
+            flex-wrap:nowrap;
+            overflow: visible;
+            margin-top: 3rem;
+          }
+          .f{
+            float: left;
+            padding: 0;
+            margin: 0;
+            width: fit-content;
+            height: fit-content;
+          }
+          .data{
+            font-size: 2rem;
+            padding: 0.5rem;
+            font-weight: bold;
+        
+          }
+          .f2{
+            width: 90%;
+            height: fit-content;
+            float: left;
+          }
+          .inp{
+            margin-top: 0.7rem;
+            height: fit-content;
+            width: fit-content;
+          }
+          .in{
+            height: 2.5rem;
+            width: 35rem;
+            border-bottom: 0.1rem solid black;
+            box-shadow: 1rem 1rem 1rem rgb(85, 82, 82);
+
+          }
+          .submit{
+            margin: auto;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            width: 10rem;
+            height: fit-content;
+            background-color: greenyellow;
+            border: 0.1rem solid black;
+            margin-top: 2rem;
+            box-shadow: 0.3rem 0.3rem 0.3rem gray;
+            margin-left: 45%;
+            border-radius:10% ;
+            padding-left: 2rem;
+          }
+         
+    </style>
+</head>
+<body>
+    <div class="signup" align="center"><h1>SIGN UP</h1></div>
+    <form action="/register" method="post">
+    <div class="two">
+        <div class="f">
+        <div class="data">Name</div>
+        <div class="data">Email</div>
+        <div class="data">Password</div>
+        <div class="f2">
+            <div class="inp"><input type="text" name="name" id="name" class="in"required placeholder="Enter your name"></div>
+            <div class="inp"><input type="email" name="email" id="email" class="in"required placeholder="Enter your email"></div>
+            <div class="inp"><input type="password" name="password1" id="password" class="in"required placeholder="Enter your password"></div>
+            <div class="inp"><input type="password" name="password" id="password2" class="in"required placeholder="Enter repeatn password"></div>
+        </div>
+    </div>
+    <input type="submit" name="submit" id="submit" class="submit" value="submit">
+  </form>
+  <script>
+    /*function validater(){
+      const password = document.getElementById('password').value;
+      
+      if(password.lenght < 8){
+      document.getElementById('pass').innerHTML="your password should be 8 chracter";
+        return false;
+      }
+
+    }*/
+  </script>
+</body>
+</html>
