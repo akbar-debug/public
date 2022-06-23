@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const bodyparser = require('body-parser');
-const index = fs.readFileSync('../anewweb/index.html');
-const register = fs.readFileSync('../anewweb/register.html');
-const login = fs.readFileSync('../anewweb/signin.html');
+const index = fs.readFileSync('index.html');
+const register = fs.readFileSync('register.html');
+const login = fs.readFileSync('signin.html');
 const home = fs.readFileSync('../anewweb/home1.html');
 const DB ="mongodbsrv://Samiullah67:Sami888+@node app.i7h4zx5.mongodb.net/app?retryWrites=true&w=majority"
 const app = express();
