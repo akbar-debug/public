@@ -2,14 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const bodyparser = require('body-parser');
-const index = fs.readFileSync('../anewweb/home.html');
+const index = fs.readFileSync('../anewweb/index.html');
 const register = fs.readFileSync('../anewweb/register.html');
 const login = fs.readFileSync('../anewweb/signin.html');
 const home = fs.readFileSync('../anewweb/home1.html');
+const DB ="mongodbsrv://Samiullah67:Sami888+@node app.i7h4zx5.mongodb.net/app?retryWrites=true&w=majority"
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 app.use(bodyparser.urlencoded({extended:true}));
-mongoose.connect("mongodb://localhost/app",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+mongoose.connect(DB,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log("connected");
 }).catch((err)=>{
     console.log(err);
@@ -51,8 +52,7 @@ app.post("/register",(req,res)=>{
 app.get("/login",(req,res)=>{
     res.end(login);
 });
-app.listen(port,()=>{
-    console.log("server running");
+
 });
 app.post("/login", async(req,res)=>{
     const mail = req.body.email;
@@ -71,3 +71,5 @@ app.post("/login", async(req,res)=>{
         res.end("Please try again there is a problem");
     }
 })
+app.listen(port,()=>{
+    console.log("server running");
